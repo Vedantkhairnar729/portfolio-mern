@@ -1,0 +1,86 @@
+.skills-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.skill-card {
+  background-color: var(--background-light);
+  border-radius: 10px;
+  padding: 25px;
+  transition: var(--transition);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.skill-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.skill-icon {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.skill-name {
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+  color: var(--text-light);
+}
+
+.skill-progress {
+  height: 10px;
+  background-color: var(--background-dark);
+  border-radius: 5px;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  background-color: var(--primary-color);
+  border-radius: 5px;
+  position: relative;
+  transition: width 1.5s ease-in-out;
+}
+
+.progress-text {
+  position: absolute;
+  right: 5px;
+  top: -18px;
+  font-size: 0.8rem;
+  color: var(--text-light);
+}
+
+.skill-technologies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tech-tag {
+  background-color: var(--primary-dark);
+  color: var(--text-light);
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  transition: var(--transition);
+}
+
+.tech-tag:hover {
+  background-color: var(--primary-color);
+  transform: scale(1.05);
+}
+
+.loading {
+  text-align: center;
+  padding: 40px;
+  font-size: 1.2rem;
+  color: var(--text-gray);
+}
+
+@media screen and (max-width: 768px) {
+  .skills-container {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+}
