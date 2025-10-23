@@ -2,25 +2,20 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './Projects.css';
 
-const Projects = () => {
+import React, { useState, useEffect } from 'react';
+import { projects as projectsData } from '../data/projects';
+import './Projects.css';
+
+function Projects() {
   const [projects, setProjects] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
 
   useEffect(() => {
-    const fetchProjects = async () => {
-      try {
-        const response = await axios.get('/api/projects');
-        setProjects(response.data);
-        setLoading(false);
-      } catch (err) {
-        console.error('Error fetching projects:', err);
-        setError('Failed to load projects');
-        setLoading(false);
-      }
-    };
-
-    fetchProjects();
+    // Simulate loading
+    setTimeout(() => {
+      setProjects(projectsData);
+      setLoading(false);
+    }, 500);
   }, []);
 
   return (
@@ -34,8 +29,6 @@ const Projects = () => {
             <div className="spinner"></div>
             <p>Loading projects...</p>
           </div>
-        ) : error ? (
-          <div className="error-message">{error}</div>
         ) : (
           <div className="projects-container">
             {projects.map((project, index) => (

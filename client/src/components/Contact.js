@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import axios from 'axios';
 import './Contact.css';
 
 const Contact = () => {
@@ -32,12 +31,17 @@ const Contact = () => {
     });
 
     try {
-      const response = await axios.post('/api/contact', formData);
+      // Simulate form submission
+      await new Promise(resolve => setTimeout(resolve, 1000));
+      
+      // Create mailto link
+      const mailtoLink = `mailto:vedantkhairnar041@gmail.com?subject=${encodeURIComponent(formData.subject)}&body=${encodeURIComponent(`Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`)}`;
+      window.location.href = mailtoLink;
       
       setStatus({
         submitted: true,
         submitting: false,
-        info: { error: false, msg: response.data.message }
+        info: { error: false, msg: 'Opening your email client...' }
       });
       
       setFormData({

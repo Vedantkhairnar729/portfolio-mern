@@ -2,25 +2,20 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './Skills.css';
 
-const Skills = () => {
+import React, { useState, useEffect } from 'react';
+import { skills as skillsData } from '../data/skills';
+import './Skills.css';
+
+function Skills() {
   const [skills, setSkills] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
 
   useEffect(() => {
-    const fetchSkills = async () => {
-      try {
-        const response = await axios.get('/api/skills');
-        setSkills(response.data);
-        setLoading(false);
-      } catch (err) {
-        console.error('Error fetching skills:', err);
-        setError('Failed to load skills');
-        setLoading(false);
-      }
-    };
-
-    fetchSkills();
+    // Simulate loading
+    setTimeout(() => {
+      setSkills(skillsData);
+      setLoading(false);
+    }, 500);
   }, []);
 
   const iconMap = {
@@ -41,25 +36,22 @@ const Skills = () => {
             <div className="spinner"></div>
             <p>Loading skills...</p>
           </div>
-        ) : error ? (
-          <div className="error-message">{error}</div>
         ) : (
           <div className="skills-container">
             {skills.map((skill, index) => (
-              <div className="skill-card" key={skill.id} style={{animationDelay: `${index * 0.1}s`}}>
-                <div className="skill-icon">{iconMap[skill.icon] || '⚡'}</div>
-                <h3 className="skill-name">{skill.name}</h3>
+              <div className="skill-card" key={index} style={{animationDelay: `${index * 0.1}s`}}>
+                <h3 className="skill-category">{skill.category}</h3>
                 <div className="skill-progress">
                   <div 
                     className="progress-bar" 
-                    style={{ width: `${skill.proficiency}%` }}
+                    style={{ width: `${skill.percentage}%` }}
                   >
                     <span className="progress-text">{skill.proficiency}%</span>
                   </div>
                 </div>
-                <div className="skill-technologies">
-                  {skill.technologies.map((tech, techIndex) => (
-                    <span className="tech-tag" key={techIndex}>{tech}</span>
+                <div className="skill-items">
+                  {skill.items.map((item, itemIndex) => (
+                    <span className="skill-item" key={itemIndex}>{item}</span>
                   ))}
                 </div>
               </div>
@@ -69,6 +61,6 @@ const Skills = () => {
       </div>
     </section>
   );
-};
+}
 
 export default Skills;
