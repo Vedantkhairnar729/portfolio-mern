@@ -674,3 +674,44 @@
     gap: 15px;
   }
 }
+
+/* Light Theme Styles */
+:root[data-theme="light"] .hero {
+  background: linear-gradient(135deg, #F8FAFC 0%, #E2E8F0 100%);
+}
+
+:root[data-theme="light"] .hero-title {
+  color: #1E293B;
+}
+
+:root[data-theme="light"] .hero-subtitle {
+  color: #334155;
+}
+
+:root[data-theme="light"] .hero-description {
+  color: #475569;
+}
+
+:root[data-theme="light"] .shape {
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.08), rgba(139, 92, 246, 0.08));
+}
+
+:root[data-theme="light"] .badge {
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.85), rgba(139, 92, 246, 0.85));
+  border-color: rgba(99, 102, 241, 0.4);
+  box-shadow: 0 10px 30px rgba(99, 102, 241, 0.3), 
+              0 0 20px rgba(99, 102, 241, 0.2),
+              inset 0 -2px 10px rgba(0, 0, 0, 0.15);
+}
+
+:root[data-theme="light"] .scroll-indicator p {
+  color: #475569;
+}
+
+:root[data-theme="light"] .mouse {
+  border-color: #6366F1;
+}
+
+:root[data-theme="light"] .wheel {
+  background-color: #6366F1;
+}

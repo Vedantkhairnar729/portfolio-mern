@@ -27,15 +27,35 @@ html {
 }
 
 body {
-  background-color: var(--background-dark);
-  color: var(--text-light);
+  background-color: var(--bg-primary, var(--background-dark));
+  color: var(--text-primary, var(--text-light));
   overflow-x: hidden;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Light theme specific styles */
+:root[data-theme="light"] {
+  --background-dark: #F8FAFC;
+  --background-light: #FFFFFF;
+  --card-bg: #FFFFFF;
+  --text-light: #1E293B;
+  --text-gray: #64748B;
+}
+
+:root[data-theme="light"] .section {
+  background-color: var(--bg-primary);
+}
+
+:root[data-theme="light"] .card-bg {
+  background-color: #FFFFFF;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .app {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  transition: background-color 0.3s ease;
 }
 
 .section {
