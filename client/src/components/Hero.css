@@ -360,28 +360,32 @@
 
 .badge {
   position: absolute;
-  width: 60px;
-  height: 60px;
-  background: linear-gradient(135deg, rgba(99, 102, 241, 0.9), rgba(139, 92, 246, 0.9));
+  width: 70px;
+  height: 70px;
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.95), rgba(139, 92, 246, 0.95));
   backdrop-filter: blur(10px);
-  border: 2px solid rgba(255, 255, 255, 0.2);
-  border-radius: 15px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.8rem;
+  font-size: 2rem;
   color: white;
-  box-shadow: 0 10px 30px rgba(99, 102, 241, 0.4);
+  box-shadow: 0 10px 30px rgba(99, 102, 241, 0.5), 
+              0 0 20px rgba(99, 102, 241, 0.3),
+              inset 0 -2px 10px rgba(0, 0, 0, 0.2);
   animation: badgeFloat 4s ease-in-out infinite;
   transition: all 0.3s ease;
   cursor: pointer;
 }
 
 .badge:hover {
-  transform: scale(1.15) translateY(-5px);
-  box-shadow: 0 15px 40px rgba(99, 102, 241, 0.6);
+  transform: scale(1.2) translateY(-8px);
+  box-shadow: 0 20px 50px rgba(99, 102, 241, 0.7),
+              0 0 30px rgba(99, 102, 241, 0.5),
+              inset 0 -2px 15px rgba(0, 0, 0, 0.3);
   background: linear-gradient(135deg, rgba(139, 92, 246, 1), rgba(99, 102, 241, 1));
-  border-color: rgba(255, 255, 255, 0.4);
+  border-color: rgba(255, 255, 255, 0.5);
 }
 
 .badge-1 {
@@ -406,42 +410,6 @@
   bottom: 15%;
   right: -8%;
   animation-delay: 3s;
-}
-
-.badge-5 {
-  top: 50%;
-  left: -10%;
-  animation-delay: 0.5s;
-}
-
-.badge-6 {
-  top: 5%;
-  right: 10%;
-  animation-delay: 1.5s;
-}
-
-.badge-7 {
-  bottom: 5%;
-  left: 5%;
-  animation-delay: 2.5s;
-}
-
-.badge-8 {
-  top: 60%;
-  right: -5%;
-  animation-delay: 3.5s;
-}
-
-.badge-9 {
-  bottom: 40%;
-  left: -5%;
-  animation-delay: 4s;
-}
-
-.badge-10 {
-  bottom: 50%;
-  right: 5%;
-  animation-delay: 4.5s;
 }
 
 @keyframes badgeFloat {
@@ -586,9 +554,10 @@
   }
 
   .badge {
-    width: 50px;
-    height: 50px;
-    font-size: 1.5rem;
+    width: 55px;
+    height: 55px;
+    font-size: 1.6rem;
+    border-radius: 50%;
   }
 }
 
@@ -660,9 +629,11 @@
   }
 
   .badge {
-    width: 40px;
-    height: 40px;
-    font-size: 1.1rem;
+    width: 45px;
+    height: 45px;
+    font-size: 1.2rem;
+    border-radius: 50%;
+    border-width: 2px;
   }
 }
 

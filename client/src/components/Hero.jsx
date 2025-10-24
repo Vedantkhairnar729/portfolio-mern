@@ -100,24 +100,7 @@ const Hero = () => {
               <div className="badge badge-4">
                 <i className="fab fa-java"></i>
               </div>
-              <div className="badge badge-5">
-                <i className="fab fa-python"></i>
-              </div>
-              <div className="badge badge-6">
-                <i className="fab fa-docker"></i>
-              </div>
-              <div className="badge badge-7">
-                <i className="fab fa-git-alt"></i>
-              </div>
-              <div className="badge badge-8">
-                <i className="fab fa-aws"></i>
-              </div>
-              <div className="badge badge-9">
-                <i className="fab fa-html5"></i>
-              </div>
-              <div className="badge badge-10">
-                <i className="fab fa-css3-alt"></i>
-              </div>
+              
             </div>
           </div>
         </div>
