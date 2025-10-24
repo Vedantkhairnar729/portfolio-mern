@@ -1,8 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
-import './Skills.css';
-
-import React, { useState, useEffect } from 'react';
 import { skills as skillsData } from '../data/skills';
 import './Skills.css';
 

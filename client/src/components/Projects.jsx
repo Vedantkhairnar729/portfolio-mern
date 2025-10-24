@@ -1,8 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
-import './Projects.css';
-
-import React, { useState, useEffect } from 'react';
 import { projects as projectsData } from '../data/projects';
 import './Projects.css';
 

@@ -59,6 +59,16 @@ const Navbar = () => {
             </Link>
           </li>
           <li>
+            <Link to="achievements" smooth={true} duration={500} onClick={toggleMenu}>
+              Achievements
+            </Link>
+          </li>
+          <li>
+            <Link to="certifications" smooth={true} duration={500} onClick={toggleMenu}>
+              Certifications
+            </Link>
+          </li>
+          <li>
             <Link to="contact" smooth={true} duration={500} onClick={toggleMenu}>
               Contact
             </Link>
