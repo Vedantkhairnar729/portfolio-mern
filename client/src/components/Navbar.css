@@ -38,6 +38,16 @@
   transform: scale(1.05);
 }
 
+.logo-image {
+  width: 40px;
+  height: 40px;
+  transition: transform 0.3s ease;
+}
+
+.logo:hover .logo-image {
+  transform: rotate(10deg) scale(1.1);
+}
+
 .logo-name {
   background: linear-gradient(135deg, #6366F1, #8B5CF6);
   padding: 8px 12px;
@@ -100,6 +110,15 @@
 @media screen and (max-width: 768px) {
   .menu-icon {
     display: flex;
+  }
+
+  .logo-image {
+    width: 35px;
+    height: 35px;
+  }
+
+  .logo-text {
+    display: none;
   }
 
   .nav-links {
@@ -181,7 +200,7 @@
 }
 
 :root[data-theme="light"] .navbar.scrolled {
-  background-color: rgba(255, 255, 255, 0.95);
+  background-color: rgba(238, 242, 255, 0.95);
   backdrop-filter: blur(10px);
   box-shadow: 0 5px 15px rgba(99, 102, 241, 0.15);
 }
@@ -190,11 +209,20 @@
   color: #1E293B;
 }
 
+:root[data-theme="light"] .logo-name {
+  background: linear-gradient(135deg, #6366F1, #8B5CF6);
+  box-shadow: 0 4px 10px rgba(99, 102, 241, 0.3);
+}
+
 :root[data-theme="light"] .nav-links a {
   color: #475569;
 }
 
 :root[data-theme="light"] .nav-links a:hover {
+  color: #6366F1;
+}
+
+:root[data-theme="light"] .nav-links a.active {
   color: #6366F1;
 }
 
@@ -210,4 +238,5 @@
 
 :root[data-theme="light"] .theme-toggle:hover {
   background: rgba(99, 102, 241, 0.2);
+  box-shadow: 0 0 15px rgba(99, 102, 241, 0.4);
 }

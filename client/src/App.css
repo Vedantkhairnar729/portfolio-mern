@@ -35,11 +35,16 @@ body {
 
 /* Light theme specific styles */
 :root[data-theme="light"] {
-  --background-dark: #F8FAFC;
+  --background-dark: #EEF2FF;
   --background-light: #FFFFFF;
   --card-bg: #FFFFFF;
   --text-light: #1E293B;
   --text-gray: #64748B;
+  --primary-color: #6366F1;
+  --primary-light: #818CF8;
+  --primary-dark: #4F46E5;
+  --secondary-color: #8B5CF6;
+  --gradient-primary: linear-gradient(135deg, #6366F1 0%, #8B5CF6 100%);
 }
 
 :root[data-theme="light"] .section {

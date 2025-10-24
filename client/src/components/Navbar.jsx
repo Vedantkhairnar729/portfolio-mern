@@ -29,7 +29,7 @@ const Navbar = () => {
     <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
       <div className="container navbar-container">
         <Link to="hero" className="logo" smooth={true} duration={500}>
-          <span className="logo-name">VK</span>
+          <img src="/logo.svg" alt="VK Logo" className="logo-image" />
           <span className="logo-text">Vedant Khairnar</span>
         </Link>
 

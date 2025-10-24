@@ -14,11 +14,14 @@
 }
 
 :root[data-theme="light"] {
-  --bg-primary: #F8FAFC;
+  --bg-primary: #EEF2FF;
   --bg-secondary: #FFFFFF;
   --text-primary: #1E293B;
   --text-secondary: #475569;
-  --border-color: rgba(0, 0, 0, 0.1);
+  --border-color: rgba(99, 102, 241, 0.2);
+  --primary-color: #6366F1;
+  --primary-light: #818CF8;
+  --secondary-color: #8B5CF6;
 }
 
 body {
