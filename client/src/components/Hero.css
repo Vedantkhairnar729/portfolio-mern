@@ -214,6 +214,19 @@
   transform: translateX(5px);
 }
 
+@keyframes btnPulse {
+  0%, 100% {
+    box-shadow: 0 4px 15px rgba(99, 102, 241, 0.4);
+  }
+  50% {
+    box-shadow: 0 6px 25px rgba(99, 102, 241, 0.7);
+  }
+}
+
+.btn-primary {
+  animation: btnPulse 2.5s ease-in-out infinite;
+}
+
 .hero-social {
   display: flex;
   gap: 20px;
@@ -360,6 +373,15 @@
   color: white;
   box-shadow: 0 10px 30px rgba(99, 102, 241, 0.4);
   animation: badgeFloat 4s ease-in-out infinite;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.badge:hover {
+  transform: scale(1.15) translateY(-5px);
+  box-shadow: 0 15px 40px rgba(99, 102, 241, 0.6);
+  background: linear-gradient(135deg, rgba(139, 92, 246, 1), rgba(99, 102, 241, 1));
+  border-color: rgba(255, 255, 255, 0.4);
 }
 
 .badge-1 {
@@ -384,6 +406,42 @@
   bottom: 15%;
   right: -8%;
   animation-delay: 3s;
+}
+
+.badge-5 {
+  top: 50%;
+  left: -10%;
+  animation-delay: 0.5s;
+}
+
+.badge-6 {
+  top: 5%;
+  right: 10%;
+  animation-delay: 1.5s;
+}
+
+.badge-7 {
+  bottom: 5%;
+  left: 5%;
+  animation-delay: 2.5s;
+}
+
+.badge-8 {
+  top: 60%;
+  right: -5%;
+  animation-delay: 3.5s;
+}
+
+.badge-9 {
+  bottom: 40%;
+  left: -5%;
+  animation-delay: 4s;
+}
+
+.badge-10 {
+  bottom: 50%;
+  right: 5%;
+  animation-delay: 4.5s;
 }
 
 @keyframes badgeFloat {

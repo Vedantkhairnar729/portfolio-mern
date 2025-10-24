@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import { Link } from 'react-scroll';
 import Typed from 'typed.js';
 import './Hero.css';
+import ParticlesBackground from './ParticlesBackground';
 
 const Hero = () => {
   const typedElement = useRef(null);
@@ -31,6 +32,7 @@ const Hero = () => {
   return (
     <section id="hero" className="hero">
       <div className="hero-background">
+        <ParticlesBackground />
         <div className="floating-shapes">
           <div className="shape shape-1"></div>
           <div className="shape shape-2"></div>
@@ -97,6 +99,24 @@ const Hero = () => {
               </div>
               <div className="badge badge-4">
                 <i className="fab fa-java"></i>
+              </div>
+              <div className="badge badge-5">
+                <i className="fab fa-python"></i>
+              </div>
+              <div className="badge badge-6">
+                <i className="fab fa-docker"></i>
+              </div>
+              <div className="badge badge-7">
+                <i className="fab fa-git-alt"></i>
+              </div>
+              <div className="badge badge-8">
+                <i className="fab fa-aws"></i>
+              </div>
+              <div className="badge badge-9">
+                <i className="fab fa-html5"></i>
+              </div>
+              <div className="badge badge-10">
+                <i className="fab fa-css3-alt"></i>
               </div>
             </div>
           </div>

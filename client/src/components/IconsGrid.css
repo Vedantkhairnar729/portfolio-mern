@@ -1,0 +1,47 @@
+.icons-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+  gap: 12px;
+  margin-top: 20px;
+  align-items: center;
+}
+
+.icon-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255,255,255,0.03);
+  padding: 15px;
+  border-radius: 8px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  border: 1px solid rgba(255,255,255,0.05);
+}
+
+.icon-item:hover {
+  transform: translateY(-8px) scale(1.05);
+  box-shadow: 0 12px 24px rgba(99, 102, 241, 0.3);
+  background: rgba(99, 102, 241, 0.1);
+  border-color: rgba(99, 102, 241, 0.3);
+}
+
+.icon-item:hover .tech-icon {
+  color: #818cf8;
+  filter: drop-shadow(0 0 8px rgba(99, 102, 241, 0.5));
+}
+
+.tech-icon {
+  font-size: 32px;
+  color: #61dafb; /* default React-like color */
+}
+
+@media (max-width: 640px) {
+  .icons-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+  }
+  .tech-icon {
+    font-size: 22px;
+  }
+}

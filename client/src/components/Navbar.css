@@ -145,3 +145,32 @@
     transform: rotate(-45deg) translate(5px, -6px);
   }
 }
+
+.theme-toggle {
+  background: rgba(99, 102, 241, 0.2);
+  border: 2px solid rgba(99, 102, 241, 0.3);
+  border-radius: 50%;
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: var(--primary-color);
+  font-size: 1.1rem;
+  margin-left: 20px;
+}
+
+.theme-toggle:hover {
+  background: rgba(99, 102, 241, 0.3);
+  transform: rotate(15deg) scale(1.1);
+  box-shadow: 0 0 15px rgba(99, 102, 241, 0.4);
+}
+
+@media (max-width: 768px) {
+  .theme-toggle {
+    margin-left: 0;
+    margin-right: 15px;
+  }
+}
